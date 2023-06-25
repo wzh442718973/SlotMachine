@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/screen_bg"
+    android:gravity="center"
+    android:paddingTop="48dp">
+
+    <View
+        android:id="@+id/thickLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/wheel_frame" />
+
+    <LinearLayout
+        android:id="@+id/slotReels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thickLine1"
+        android:orientation="horizontal">
+
+        <com.mani.slotmachine.WheelView
+            android:id="@+id/wheel1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <com.mani.slotmachine.WheelView
+            android:id="@+id/wheel2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+        <com.mani.slotmachine.WheelView
+            android:id="@+id/wheel3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/thickLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_below="@id/slotReels"
+        android:background="@drawable/wheel_frame" />
+
+    <RelativeLayout
+        android:id="@+id/slotSpinLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thickLine2"
+        android:layout_alignLeft="@id/thickLine2"
+        android:layout_alignRight="@id/thickLine2"
+        android:background="@drawable/wheel_frame"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/welcomeTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/welcome_text"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/resultTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeTxt"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/result_text"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/spin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeTxt"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/spin_button_bg"
+            android:padding="10dp"
+            android:text="@string/spin"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/authorTxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spin"
+            android:layout_alignParentLeft="true"
+            android:text="@string/author_text"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>        
